@@ -1,0 +1,31 @@
+./" Manpage for monikamanager 
+.TH man 1 „May 2023" "1.0" "monikamanager man page"
+
+.SH NAME
+	monikamanger is a tool enabling fast and effective detecting copies of files in all directories in the specified path. It can also list the biggest files in the specified path location.
+
+.SH SYNOPSIS
+.TP
+	./monikamanager.sh  --scan [PATH]
+.TP
+	./monikamanager.sh  --find-duplicates [PATH]
+.TP
+	./monikamanager.sh  --ranking [PATH] [NUMBER]
+
+.SH DESCRIPTION
+monikamanger is a tool enabling fast and effective detecting copies of files in all directories in the specified path. It can also list the biggest files in the specified path location.
+
+.SH OPTIONS
+
+    --help                  prints fast help menu and exits the script
+    --scan PATH             scans given PATH and writes filenames, file hashes, file sizes to .mm databases. Each .mm file is located 				     in every directory in the scanned path
+    --find-duplicates PATH  finds duplicates in the subtree beginning in the PATH. It is achieved by going through the prevoiusly 			     generated .mm files
+    --force                 force update .mm files, regardless of changes in them
+    --ranking PATH NUMBER   displays a list of NUMBER of filenames of the biggest files in 				     the specified PATH and the whole subtree
+    
+    
+	Script creates .mm database files in every directory that is scans. Each .mm file consists of the list of: filenames-modificationTime-fileHash-fileSize. In order to properly find duplicates or list of biggest files it is obligatory to firstly perform the --scan PATH operation (which creates the .mm files) and then it is possible to perform the rest of the possible operations.    
+
+.SH AUTHOR
+Written by Monika Zarudzka for Study project at Politechnika Gdanska
+
