@@ -16,4 +16,7 @@ Script creates .mm database  files  in  every  directory  that  is scanned.
 Each  .mm file consists of the list of: filenames-modification‐Time-fileHash-fileSize. 
 In order to properly find duplicates or list of biggest files it is obligatory to firstly perform the following operation:
 --scan PATH (which creates the .mm files) and then it is possible to  perform the rest of the possible operations.
-You can find the rest of the information in yhe man file
+You can find the rest of the information in the man file. Run:
+```bash
+man monikamanager
+```
